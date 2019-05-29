@@ -1,0 +1,262 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+<link rel="stylesheet" href="touchgallery.css" />
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+
+<script src="touchgallery.js">
+
+/***********************************************
+* Touch Image Gallery- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* Please keep this notice intact
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+***********************************************/
+
+</script>
+
+<script>
+
+jQuery(function(){ // on DOM load
+		$('div#touchgallery1').touchgallery({  // initialize first demo
+			width: 800,
+			height: 280
+		})
+		
+	})
+
+</script>
+
+
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        
+        .style1
+        {
+            width: 800px;
+        }
+        .style2
+        {
+            width: 268px;
+        }
+        .style3
+        {
+            height: 21px;
+        }
+        
+        
+    </style>
+</head>
+<body background="resim/Untitled-2.jpg">
+    
+    <form id="form1" runat="server">
+    <table align="center" cellpadding="0" cellspacing="0" class="style1">
+        <tr>
+            <td height="100">
+                <table cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                        <td height="100" width="266">
+                            &nbsp;</td>
+                        <td width="266">
+                            <asp:Image ID="Image1" runat="server" Height="100px" 
+                                ImageUrl="~/resim/kanal_d_canli_yayin_h13090 copy.png" Width="266px" />
+                        </td>
+                        <td width="268">
+                            <table cellpadding="0" cellspacing="0" class="style2">
+                                <tr>
+                                    <td height="30">
+                                        English / Türkçe</td>
+                                </tr>
+                                <tr>
+                                    <td height="40">
+                                        <asp:Image ID="Image2" runat="server" Height="40px" 
+                                            ImageUrl="~/resim/arama.png" Width="200px" />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td height="30">
+                                        <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click" 
+                                            PostBackUrl="~/uye_katit.aspx">üye ol</asp:LinkButton>
+&nbsp;/
+                                        <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click" 
+                                            PostBackUrl="~/uye_giris.aspx">üye girişi</asp:LinkButton>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" height="40">
+                Türkiye&#39;nin Kanalı</td>
+        </tr>
+        <tr>
+            <td height="50">
+                <asp:Menu ID="Menu1" runat="server" BackColor="White" ForeColor="#00FFCC" 
+                    Height="50px" Orientation="Horizontal" style="margin-bottom: 0px" Width="800px">
+                    <StaticMenuStyle Height="50px" Width="160px" />
+                    <StaticSelectedStyle Height="50px" Width="160px" />
+                    <StaticMenuItemStyle Height="50px" Width="160px" />
+                    <DynamicHoverStyle BackColor="Aqua" ForeColor="White" Height="50px" 
+                        Width="160px" />
+                    <DynamicMenuStyle Height="150px" Width="160px" />
+                    <DynamicSelectedStyle Height="50px" Width="160px" />
+                    <DynamicMenuItemStyle Height="50px" Width="160px" />
+                    <StaticHoverStyle BackColor="Aqua" ForeColor="White" Height="50px" 
+                        Width="160px" />
+                    <Items>
+                        <asp:MenuItem Text="Anasayfa" Value="Anasayfa"></asp:MenuItem>
+                        <asp:MenuItem Text="Diziler" Value="Diziler"></asp:MenuItem>
+                        <asp:MenuItem Text="Programlar" Value="Programlar">
+                            <asp:MenuItem Text="Bana Her Şey Yakışır" Value="Bana Her Şey Yakışır">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Koca Kafalar" Value="Koca Kafalar"></asp:MenuItem>
+                            <asp:MenuItem Text="Evim Şahane" Value="Evim Şahane"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="Yayın Akışı" Value="Yayın Akışı"></asp:MenuItem>
+                        <asp:MenuItem Text="İletişim" Value="İletişim"></asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </td>
+        </tr>
+        <tr>
+            <td height="40">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td height="250">
+           
+            
+            <table width="800" height="250">
+                <tr><td>
+                <div id="touchgallery1" class="touchgallery">
+<ul>
+<li><img src="resim/ben%20bilmem.png" /></li>
+<li><img src="resim/beyaz.png" /></li>
+<li><img src="resim/kuzey.png" /></li>
+<li><img src="resim/dervis.png" /></li>
+</ul>
+</div>
+
+<br /><br />
+
+
+                </td></tr>
+                </table>
+
+              
+                </td>
+        </tr>
+        <tr>
+            <td height="50">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td height="400">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr>
+            <td height="50">
+                &nbsp;</td>
+        </tr>
+        <tr>
+            <td height="150">
+                <table cellpadding="0" cellspacing="0" class="style1" 
+                    style="color: #FFFFFF; font-family: 'trebuchet MS'">
+                    <tr>
+                        <td class="style3" width="266">
+                            DİZİLER</td>
+                        <td class="style3" width="266">
+                            PROGRAMLAR</td>
+                        <td class="style3" width="268">
+                            KLASİK DİZİLER</td>
+                    </tr>
+                    <tr>
+                        <td class="style3">
+                            Kuzey Güney</td>
+                        <td class="style3">
+                            Ben Bilmem Eşim Bilir</td>
+                        <td class="style3">
+                            Çemberimde Gül Oya
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="21">
+                            Galip Derviş
+                        </td>
+                        <td>
+                            Bana Her Şey Yakışır</td>
+                        <td>
+                            Yaprak Dökümü</td>
+                    </tr>
+                    <tr>
+                        <td height="21">
+                            Arka Sokaklar</td>
+                        <td>
+                            Şans Kapıda
+                        </td>
+                        <td>
+                            Aşk-ı Memnu</td>
+                    </tr>
+                    <tr>
+                        <td height="21">
+                            Öyle Bir Geçer Zaman Ki</td>
+                        <td>
+                            Evim Şahane
+                        </td>
+                        <td>
+                            RADYO D</td>
+                    </tr>
+                    <tr>
+                        <td height="21">
+                            Merhamet</td>
+                        <td>
+                            Doktorum</td>
+                        <td rowspan="2">
+                            Twitter
+                            <asp:Image ID="Image3" runat="server" Height="42px" 
+                                ImageUrl="~/resim/twit.png" Width="50px" />
+&nbsp;&nbsp;&nbsp; Facebook
+                            <asp:Image ID="Image4" runat="server" Height="42px" 
+                                ImageUrl="~/resim/face.png" Width="50px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="24">
+                            İntikam</td>
+                        <td>
+                            Koca Kafalar</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="70">
+                <table cellpadding="0" cellspacing="0" class="style1">
+                    <tr>
+                        <td align="right" height="35">
+                            REKLAM | KÜNYE | YAYIN İLKELERİMİZ | İZLEYİCİ TEMSİLCİSİ | İLETİŞİM</td>
+                    </tr>
+                    <tr>
+                        <td align="right" height="35">
+                            Coopylight 2012 KANAL D. Her Hakkı Saklıdır.</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</form>
+    
+</body>
+</html>
